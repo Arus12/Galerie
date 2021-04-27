@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+body {
+    line-height: 1;
+    color: black;
+    background-color: rgb(226, 226, 214);
+    height: auto;
+}
+header{
+    height: 9em;
+    position: relative;
+    background-color: rgb(216, 180, 63);
+}
+header > .nadpis{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header > .nadpis > h1{
+    text-align: center;
+    font-size: 4em;
+    font-weight: bold;
+}
+main{
+    display:block;
+    width: 100%;
+    margin-top: 20%;
+    margin-bottom: 35%;
+}
+main > .tabulka{
+    background-color: white;
+    position: relative;
+    text-align: center;
+    border: 4px solid;
+    margin: 1% 30%;
+    height: 20em;
+}
+main > .tabulka > ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+main > .tabulka > ul li{
+    list-style-type: none;
+    font-size:1.5em;
+}
+main > .tabulka > ul li p{
+    font-weight: bold;
+    font-size:1.5em;
+}
+main > .tabulka > ul .datum > li p{
+    margin: 1em;
+    margin-bottom: 0.5em;
+}
+main > .tabulka > ul .čas > li p{
+    margin: 1em;
+    margin-bottom: 0.5em;
+}
+main > .tabulka > ul .datum{
+    margin-bottom: 2em;
+}
+
+main > .tabulka > ul .čas{
+    margin-bottom: 0.5em;
+}
+footer{
+    height: 7em;
+    position: relative;
+    background-color: rgb(216, 180, 63);
+}
+footer p{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+  }
