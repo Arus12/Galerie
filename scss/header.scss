@@ -1,0 +1,17 @@
+header {
+    height: 9em;
+    position: relative;
+    background-color: rgb(216, 180, 63);
+}
+ header > .nadpis {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    header > .nadpis  >  h1 {
+        text-align: center;
+        font-size: 4em;
+        font-weight: bold;
+    }
