@@ -1,6 +1,6 @@
-# Základy iformace o PHPUnit testu a popis spouštění
+# Základy informace o PHPUnit testu a popis spouštění
 
-## Základní iformace
+## Základní informace
 
 Program počítá kvadratickou rovnici. Na vstupu jsou tři čísla, označena písmenka a, b, c. Program spočítá determinant a popřípadě, kdyby determinant vyšel nevhodně, tak program vypíše chybu a zastaví se. Poté vypočítá výsledek a zkontroluje, zdali je výsledek možný. Kdyby ne, tak napíše chybovou hlášku a kdyby byl možný pouze jeden z výsledků x, tak vypíše pouze ten správný.
 
