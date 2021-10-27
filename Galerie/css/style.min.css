@@ -1,0 +1,356 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Pattaya&display=swap");
+html {
+    background-color: #d2d2d2;
+    height: 100%;
+}
+
+
+/* hlavní strana - PC */
+
+header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 12.6em 1fr 1fr 1fr;
+    grid-template-columns: 12.6em 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". logo h1 .";
+}
+
+header .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: logo;
+}
+
+header .logo img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+header h1 {
+    font-family: "Exo 2", sans-serif;
+    font-size: 50;
+    width: auto;
+    height: auto;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 40px;
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: h1;
+}
+
+
+/* hlavní strana - mobil */
+
+@media screen and (max-width: 768px) {
+    header {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 0.5em 1fr 1fr 1fr;
+        grid-template-columns: 0.5em 1fr 1fr 1fr;
+        -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: ". logo . ." "h1 h1 h1 h1";
+    }
+}
+
+
+/* hlavní strana - PC */
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+main {
+    height: 79%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: white;
+}
+
+main .buttons {
+    padding: 2em;
+    border-right: 1.5px solid;
+}
+
+main .buttons .button {
+    text-decoration: underline;
+    font-family: "Pattaya", sans-serif;
+    font-size: 20;
+    background-color: #d2d2d2;
+    padding: 2em 2em;
+    color: black;
+    outline: none;
+    border: none;
+    border-radius: 1.8em 1.5em 1.5em 1.8em;
+    cursor: pointer;
+    -webkit-transition: -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
+    transition: -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s, -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
+}
+
+main .images {
+    font-weight: bold;
+    width: auto;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: justify;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+main .images .image {
+    margin: 8em;
+}
+
+main .images .image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+main .images .image p {
+    font-size: 20;
+    display: inline;
+    float: left;
+    margin: 0.5em 0 0 0;
+}
+
+main .images .image .fas {
+    color: black;
+    font-size: 2rem;
+    float: right;
+    margin: 0.2em;
+}
+
+main .images .image .fa-trash-alt:before {
+    color: rgba(206, 6, 6, 0.973);
+}
+
+.button:hover {
+    -webkit-transition: transformY -5px;
+    transition: transformY -5px;
+    -webkit-box-shadow: 0 5px 5px black;
+    box-shadow: 0 5px 5px black;
+}
+
+
+/* hlavní strana - mobil */
+
+@media screen and (max-width: 768px) {
+    main {
+        height: auto;
+        display: block;
+    }
+    main>.buttons {
+        padding: 2em;
+        border: 1.5px solid;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+    }
+    main>.images {
+        height: auto;
+        overflow: unset;
+    }
+}
+
+
+/* nahrát - PC */
+
+main .back {
+    margin: 4em 0 0 13em;
+    height: auto;
+}
+
+main .back .fa-arrow-circle-left:before {
+    color: black;
+    font-size: 100;
+}
+
+main .upload {
+    display: block;
+    margin: auto;
+    margin-top: 4em;
+    width: 25em;
+    height: auto;
+}
+
+main .upload .img_name {
+    text-align: left;
+    max-width: 300;
+    width: 100%;
+    height: auto;
+}
+
+main .upload .img_description {
+    margin-top: 10em;
+    margin-left: -22em;
+    text-align: left;
+}
+
+main .upload .img_name input[type="text"],
+main .upload select {
+    max-width: 300;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+main .upload .nahrat {
+    width: 25em;
+    height: 25em;
+    border: 1px solid black;
+    margin-right: -22em;
+    margin-top: -130%;
+    float: right;
+}
+
+main .upload .nahrat form {
+    width: 25em;
+    height: 25em;
+    border: 1px solid black;
+    margin-right: -22em;
+    margin-top: -130%;
+    float: right;
+}
+
+main .upload button {
+    text-decoration: underline;
+    font-family: "Pattaya", sans-serif;
+    font-size: 20;
+    background-color: #d2d2d2;
+    padding: 2em 2em;
+    color: black;
+    outline: none;
+    border: none;
+    border-radius: 1.8em 1.5em 1.5em 1.8em;
+    cursor: pointer;
+    -webkit-transition: -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
+    transition: -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s, -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
+    margin-top: 5em;
+    margin-left: 5em;
+    margin-bottom: 6em;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+input#fileToUpload {
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+
+/* hlavní strana - PC */
+
+footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 13em 1fr 1fr 1fr 4em;
+    grid-template-columns: 13em 1fr 1fr 1fr 4em;
+    -ms-grid-rows: 0.5fr;
+    grid-template-rows: 0.5fr;
+    grid-template-areas: ". date h2 author .";
+}
+
+footer p {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: date;
+    line-height: 10px;
+}
+
+footer h2 {
+    font-family: "Exo 2", sans-serif;
+    font-size: 50;
+    letter-spacing: 2px;
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: h2;
+    text-align: center;
+    line-height: 15px;
+}
+
+footer author {
+    display: -ms-grid;
+    display: grid;
+    font-weight: bold;
+    font-size: 20;
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+    grid-area: author;
+    text-align: right;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    line-height: 15px;
+}
+
+
+/* hlavní strana - mobil */
+
+@media screen and (max-width: 768px) {
+    footer {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        -ms-grid-rows: 0.5fr 0.5fr 0.5fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+        grid-template-areas: "h2" "date" "author";
+    }
+}
+
+
+/*# sourceMappingURL=style.css.map */

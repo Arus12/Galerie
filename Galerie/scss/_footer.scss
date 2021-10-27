@@ -1,0 +1,45 @@
+/* hlavní strana - PC */
+
+footer {
+    display: grid;
+    grid-template-columns: 13em 1fr 1fr 1fr 4em;
+    grid-template-rows: 0.5fr;
+    grid-template-areas: ". date h2 author .";
+    p {
+        display: grid;
+        align-items: center;
+        font-weight: bold;
+        font-size: 20;
+        grid-area: date;
+        line-height: 10px
+    }
+    h2 {
+        font-family: $font;
+        font-size: 50;
+        letter-spacing: 2px;
+        grid-area: h2;
+        text-align: center;
+        line-height: 15px;
+    }
+    author {
+        display: grid;
+        font-weight: bold;
+        font-size: 20;
+        grid-area: author;
+        text-align: right;
+        align-items: center;
+        line-height: 15px;
+    }
+}
+
+
+/* hlavní strana - mobil */
+
+@media screen and (max-width: $breakpoint) {
+    footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+        grid-template-areas: "h2" "date" "author";
+    }
+}

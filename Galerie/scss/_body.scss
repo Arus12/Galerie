@@ -1,0 +1,178 @@
+/* hlavní strana - PC */
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+main {
+    height: 79%;
+    display: flex;
+    background-color: white;
+    .buttons {
+        padding: 2em;
+        border-right: 1.5px solid;
+        .button {
+            text-decoration: underline;
+            font-family: "Pattaya", sans-serif;
+            font-size: 20;
+            background-color: $background;
+            padding: 2em 2em;
+            color: black;
+            outline: none;
+            border: none;
+            border-radius: 1.8em 1.5em 1.5em 1.8em;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+    }
+    .images {
+        font-weight: bold;
+        width: auto;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        text-align: justify;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: auto;
+        .image {
+            margin: 8em;
+            img {
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+                margin-bottom: 1em;
+            }
+            p {
+                font-size: 20;
+                display: inline;
+                float: left;
+                margin: 0.5em 0 0 0;
+            }
+            .fas {
+                color: black;
+                font-size: 2rem;
+                float: right;
+                margin: 0.2em;
+            }
+            .fa-trash-alt:before {
+                color: rgba(206, 6, 6, 0.973);
+            }
+        }
+    }
+}
+
+.button:hover {
+    transition: transformY (-5px);
+    box-shadow: 0 5px 5px black;
+}
+
+
+/* hlavní strana - mobil */
+
+@media screen and (max-width: $breakpoint) {
+    main {
+        height: auto;
+        display: block;
+    }
+    main>.buttons {
+        @include buttons;
+    }
+    main>.images {
+        height: auto;
+        overflow: unset;
+    }
+}
+
+
+/* nahrát - PC */
+
+main {
+    .back {
+        margin: 4em 0 0 13em;
+        height: auto;
+        .fa-arrow-circle-left:before {
+            color: black;
+            font-size: 100;
+        }
+    }
+    .upload {
+        display: block;
+        margin: auto;
+        margin-top: 4em;
+        width: 25em;
+        height: auto;
+        .img_name {
+            text-align: left;
+            max-width: 300;
+            width: 100%;
+            height: auto;
+        }
+        .img_description {
+            margin-top: 10em;
+            margin-left: -22em;
+            text-align: left;
+        }
+        .img_name input[type="text"],
+        select {
+            max-width: 300;
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid black;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .nahrat {
+            width: 25em;
+            height: 25em;
+            border: 1px solid black;
+            margin-right: -22em;
+            margin-top: -130%;
+            float: right;
+            form {
+                width: 25em;
+                height: 25em;
+                border: 1px solid black;
+                margin-right: -22em;
+                margin-top: -130%;
+                float: right;
+            }
+        }
+        button {
+            text-decoration: underline;
+            font-family: "Pattaya", sans-serif;
+            font-size: 20;
+            background-color: #d2d2d2;
+            padding: 2em 2em;
+            color: black;
+            outline: none;
+            border: none;
+            border-radius: 1.8em 1.5em 1.5em 1.8em;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 5em;
+            margin-left: 5em;
+            margin-bottom: 6em;
+        }
+    }
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+input#fileToUpload {
+    height: 100%;
+    width: 100%;
+    display: none;
+}
