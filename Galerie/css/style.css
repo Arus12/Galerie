@@ -1,0 +1,411 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Pattaya&display=swap");
+
+/* files - PC */
+
+html {
+    background-color: #d2d2d2;
+    height: auto;
+    width: auto;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+header {
+    background-color: #000000a9;
+    display: grid;
+    grid-template-columns: 12.6em 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". logo h1 .";
+}
+
+header>.logo {
+    grid-area: logo;
+}
+
+header>.logo img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+header h1 {
+    color: white;
+    font-family: "Exo 2", sans-serif;
+    font-size: 50;
+    width: auto;
+    height: auto;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 40px;
+    grid-area: h1;
+}
+
+main {
+    height: 79%;
+    position: relative;
+    display: flex;
+    background-color: white;
+}
+
+main>.buttons {
+    padding: 2em;
+    border-right: 1.5px solid;
+}
+
+main>.buttons .button {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-decoration: underline;
+    font-family: "Pattaya", sans-serif;
+    font-size: 20;
+    background-color: #000000a9;
+    padding: 2em 2em;
+    margin-bottom: 2em;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 1.8em 1.5em 1.5em 1.8em;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.button:hover {
+    transition: transformY (-5px);
+    box-shadow: 0 5px 5px gray;
+}
+
+main>.buttons a {
+    height: 0;
+}
+
+main>.buttons .fa-arrow-circle-left:before {
+    margin: 25%;
+    width: 100;
+    display: flex;
+    flex-wrap: wrap;
+    color: rgba(0, 0, 0, 0.918);
+    font-size: 90px;
+}
+
+main>.images {
+    font-weight: bold;
+    width: auto;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: justify;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: auto;
+}
+
+main>.images>.image>p {
+    font-size: 20;
+    display: inline;
+    float: left;
+    margin: 0.5em 0 0 0;
+}
+
+main>.images>.image .fas {
+    color: black;
+    font-size: 2rem;
+    float: right;
+    margin: 0.2em;
+}
+
+main>.images>.image .fa-trash-alt:before {
+    color: rgba(206, 6, 6, 0.973);
+}
+
+main>.images>.image {
+    margin: 8em;
+}
+
+main>.images>.image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+footer {
+    display: grid;
+    background-color: #000000a9;
+    grid-template-columns: 13em 1fr 1fr 1fr 4em;
+    grid-template-rows: 0.5fr;
+    grid-template-areas: ". date h2 author .";
+}
+
+footer p {
+    color:white;
+    display: grid;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20;
+    grid-area: date;
+    line-height: 10px;
+}
+
+footer h2 {
+    color:white;
+    font-family: "Exo 2", sans-serif;
+    font-size: 50;
+    letter-spacing: 2px;
+    grid-area: h2;
+    text-align: center;
+    line-height: 15px;
+    margin-left: 110px;
+}
+
+footer author {
+    color:white;
+    display: grid;
+    font-weight: bold;
+    font-size: 20;
+    grid-area: author;
+    text-align: right;
+    align-items: center;
+    line-height: 15px;
+}
+
+
+/* files - mobil */
+
+@media screen and (max-width: 768px) {
+    header {
+        display: grid;
+        grid-template-columns: 0.5em 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: ". logo . ." "h1 h1 h1 h1";
+    }
+    main {
+        height: auto;
+        display: block;
+    }
+    main>.buttons {
+        padding: 2em;
+        border: 1.5px solid;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    main>.images {
+        height: auto;
+        overflow: unset;
+    }
+    footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+        grid-template-areas: "h2" "date" "author";
+    }
+    footer p {
+        text-align: center;
+    }
+    footer author {
+        text-align: center;
+    }
+}
+
+
+/* hlavní strana - PC */
+
+main>.folders {
+    font-weight: bold;
+    width: auto;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+main>.folders>.folder {
+    margin: auto;
+    width: auto;
+    height: auto;
+}
+
+main>.folders>.folder button {
+    margin: 10em;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    left: -40%;
+}
+
+main>.folders>.folder button .fas {
+    position: relative;
+    color: #fccc77;
+    font-size: 10rem;
+    float: center;
+}
+
+main>.folders>.folder>a {
+    text-decoration: none;
+}
+
+main>.folders>.folder button p {
+    font-weight: bold;
+    position: relative;
+    bottom: 93px;
+    color: rgb(8, 1, 1);
+    font-family: "Exo 2", sans-serif;
+}
+
+
+/* nahrát - PC */
+
+main>.back {
+    top: 10%;
+    position: relative;
+    height: auto;
+    width: 18%;
+}
+
+main>.back .fa-arrow-circle-left:before {
+    margin-top: 10%;
+    margin-left: 50%;
+    color: black;
+    font-size: 100px;
+}
+
+main>.upload {
+    position: relative;
+    top: 10%;
+    height: 90%;
+    width: 100%;
+}
+
+main>.upload>.img_name {
+    margin: auto;
+    text-align: left;
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 3%;
+}
+
+main>.upload>.img_description {
+    position: relative;
+    text-align: left;
+    width: 55%;
+}
+
+main>.upload>.img_name input[type="text"],
+select {
+    max-width: 300;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 4px;
+    resize: none;
+}
+
+main>.upload>.nahrat {
+    position: relative;
+    float: right;
+    margin-right: 12%;
+    top: 10%;
+    width: 30%;
+    height: 35%;
+    border: 1px solid black;
+}
+
+input#fileToUpload {
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+form {
+    width: 50%;
+    margin: auto;
+}
+
+main>.upload>button {
+    position: relative;
+    text-decoration: underline;
+    font-family: "Pattaya", sans-serif;
+    font-size: 20;
+    background-color: #d2d2d2;
+    padding: 2em 2em;
+    margin-left: 45%;
+    top: 5%;
+    color: black;
+    outline: none;
+    border: none;
+    border-radius: 1.8em 1.5em 1.5em 1.8em;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+/* nahrát - mobil */
+
+@media screen and (max-width: 768px) {
+    main {
+        height: auto;
+    }
+    main>.back {
+        height: auto;
+        width: auto;
+    }
+    main>.upload {
+        height: auto;
+    }
+    main>.back .fa-arrow-circle-left {
+        margin-top: 3%;
+        margin: auto;
+        color: black;
+    }
+    main>.upload>.img_name::before {
+        position: relative;
+        margin: auto;
+        text-align: left;
+        max-width: 600px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 3%;
+    }
+    main>.upload>.img_description {
+        position: relative;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 5%;
+    }
+    main>.upload>.nahrat {
+        position: relative;
+        top: 10%;
+        width: 80%;
+        height: 50%;
+        border: 1px solid black;
+        margin-bottom: 5%;
+    }
+    main>.upload>button {
+        margin-left: 38%;
+        margin-bottom: 5%;
+    }
+}
