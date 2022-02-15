@@ -1,10 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Pattaya&display=swap");
-/* files - PC */
-
 html {
-    background-color: #d2d2d2;
     height: 100%;
-    width: auto;
 }
 
 body {
@@ -212,6 +208,7 @@ main>.images {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    text-align: justify; 
     margin: auto;
 }
 
@@ -270,7 +267,6 @@ main>.images>.image .fas:hover {
 main>.images>.image {
     margin: 8em;
     position: relative;
-    left: 100px;
     width:300px;
     height: 200px;
 }
@@ -325,15 +321,13 @@ footer author {
     align-items: center;
 }
 
-
-/* files - mobil */
-
 @media screen and (max-width: 768px) {
     header {
         display: grid;
-        grid-template-columns: 0.5em 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
-        grid-template-areas: "username logo . ." "h1 h1 h1 h1";
+        grid-template-areas: "username . logo" 
+                              "h1 h1 h1";
     }
     main {
         height: auto;
@@ -348,6 +342,14 @@ footer author {
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
+    
+    main>.folders>.folder {
+        margin: 6em;
+        width: auto;
+        height: auto;
+        position: relative;
+    }
+    
     main>.images {
         height: auto;
         overflow: unset;
@@ -365,9 +367,6 @@ footer author {
         text-align: center;
     }
 }
-
-
-/* hlavní strana - PC */
 
 main>.folders {
     font-weight: bold;
@@ -387,7 +386,7 @@ main>.folders>.folder {
     width: auto;
     height: auto;
     position: relative;
-    left: 150px;
+    left: 85px;
 }
 
 main>.folders>.public_folder {
@@ -395,7 +394,7 @@ main>.folders>.public_folder {
     width: auto;
     height: auto;
     position: relative;
-    left: 150px;
+    left: 85px;
     align-items: center;
 }
 
@@ -431,7 +430,6 @@ main>.folders>.public_folder button .fas:hover {
 }
 
 main>.folders>.folder form button {
-    /*margin: 10em;*/
     position: relative;
     cursor: pointer;
     border: none;
@@ -498,9 +496,6 @@ main>.folders>.folder form i p {
     width: 100%;
     display:flex;
 }
-
-
-/* nahrát - PC */
 
 .upload_container {
     margin: auto;
@@ -624,8 +619,6 @@ main>.folders>.folder form i p {
     opacity: 0;
 }
 
-/* nahrát - mobil */
-
 @media screen and (max-width: 768px) {
     main {
         height: auto;
@@ -662,7 +655,6 @@ main>.folders>.folder form i p {
     }
 }
 
-/* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
     margin: auto;
     display: flex;
@@ -686,22 +678,18 @@ main>.folders>.folder form i p {
     line-height: 70px;
   }
 
-  
-  /* The popup form - hidden by default */
   .form-popup {
     display: none;
     bottom: 0;
     z-index: 9;
   }
-  
-  /* Add styles to the form container */
+ 
   .container > .form-container {
     max-width: 300px;
     padding: 10px;
     background-color: white;
   }
   
-  /* Full-width input fields */
   .form-container input[type=text], .container > .form-container input[type=password] {
     width: 100%;
     padding: 15px;
@@ -712,13 +700,11 @@ main>.folders>.folder form i p {
     right: 15px;
   }
   
-  /* When the inputs get focus, do something */
   .form-container input[type=text]:focus, .form-container input[type=password]:focus {
     background-color: #ddd;
     outline: none;
   }
-  
-  /* Set a style for the submit/login button */
+
   .form-container .btn {
     border-radius: 20px;
     padding: 16px 20px;
@@ -730,7 +716,6 @@ main>.folders>.folder form i p {
     opacity: 0.8;
   }
   
-  /* Add a red background color to the cancel button */
   .form-container .cancel {
     background-color:white;
     position: relative;
@@ -739,29 +724,25 @@ main>.folders>.folder form i p {
     cursor: pointer;
   }
   
-  /* Add some hover effects to buttons */
   .form-container .btn:hover, .open-button:hover {
     opacity: 1;
   }
 
-
-
-  /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); 
   }
   
-  /* Modal Content (image) */
+  
   .modal-content {
     margin: auto;
     display: block;
@@ -769,7 +750,6 @@ main>.folders>.folder form i p {
     max-width: 500px;
   }
   
-  /* Caption of Modal Image */
   #caption {
     margin: auto;
     display: block;
@@ -782,7 +762,6 @@ main>.folders>.folder form i p {
     height: 150px;
   }
   
-  /* Add Animation */
   .modal-content, #caption {  
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
@@ -799,8 +778,6 @@ main>.folders>.folder form i p {
     from {transform:scale(0)} 
     to {transform:scale(1)}
   }
-  
-  /* The Close Button */
   .close {
     position: absolute;
     top: 15px;
@@ -817,8 +794,7 @@ main>.folders>.folder form i p {
     text-decoration: none;
     cursor: pointer;
   }
-  
-  /* 100% Image Width on Smaller Screens */
+
   @media only screen and (max-width: 700px){
     .modal-content {
       width: 100%;
@@ -834,7 +810,6 @@ main>.folders>.folder form i p {
     background-size: cover;
     box-sizing: border-box;
  }
-
 
  .image .edit {
     position: absolute;

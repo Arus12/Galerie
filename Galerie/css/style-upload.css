@@ -16,7 +16,7 @@ header {
     display: grid;
     grid-template-columns: 11.5em 1fr 1fr 1fr 4em;
     grid-template-rows: 4.65em;
-    grid-template-areas: "username logo h1 . .";
+    grid-template-areas: ". logo h1 . .";
 }
 
 header>.logo {
@@ -62,6 +62,14 @@ footer .username p {
     grid-area: username;
 }
 
+@media screen and (max-width: 768px) {
+    header {
+        grid-template-columns: 5em 5em 1fr;
+        grid-template-rows: 4.65em;
+        grid-template-areas: ". logo h1";
+    }
+    
+}
 main {
     display: flex;
     justify-content: center;
@@ -484,4 +492,11 @@ footer author {
     grid-area: author;
     text-align: right;
     align-items: center;
+}
+@media screen and (max-width: 768px) {
+    footer {
+        grid-template-columns: 5em 1fr 1fr 1fr;
+        grid-template-rows: 5em;
+        grid-template-areas: "username date h2 author";
+    }
 }
