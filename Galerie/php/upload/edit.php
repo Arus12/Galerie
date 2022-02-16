@@ -191,7 +191,7 @@ class edit{
             $sql = "INSERT INTO `folder_image` (`image_idimage`, `folder_idfolder`) VALUES ('$idimagen', '$idfolder')";
             $result = $conn->query($sql);
             }
-            rename("../../imgs/$email/$lastimagename.$typeimage", "../../imgs/$email/$imagename.$typeimage");
+            rename("../../imgs/$email/$lastimagename$typeimage", "../../imgs/$email/$imagename$typeimage");
             if($result){
                 $obj->set_upload_state("succes");
                 header("Location: ../../index.php");
