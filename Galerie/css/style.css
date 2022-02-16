@@ -105,7 +105,7 @@ main>.buttons > .nav_button button {
 }
 
 main > .buttons > .nav_button > form p{
-    height: 70px;
+    font-size: 15px;
     width: 100px;
     line-height: 70px;
 
@@ -673,7 +673,7 @@ main>.folders>.folder form i p {
   }
 
   .open-button p {
-    height: 70px;
+    font-size: 15px;
     width: 100px;
     line-height: 70px;
   }
