@@ -239,9 +239,18 @@ class get_file extends sql_conn
             $image_name = $this->get_name_image($conn, $idimages[$i]);
             $image_type = $this->get_type_image($conn, $idimages[$i]);
             $image_date = $this->get_date_image($conn, $idimages[$i]);
+            $dates = explode("-", $image_date);
             $html .= ('<div class="image"><p>' . ucfirst($image_name) . '</p>
             <img id="myImg' . $i . '" src="imgs/' . $email . '/' . $image_name  . $image_type . '" alt="' . ucfirst($image_name) . '" style="cursor: pointer;">
-            <p>' . $image_date . '</p></div>');
+            <p>'); 
+            for ($x = 2; $x != -1; $x--) {
+                if ($x == 0) {
+                    $html .= $dates[$x];
+                } else {
+                    $html .= $dates[$x] . ".";
+                }
+            }
+            $html .= ('</p></div>');
             $i++;
         }
         $html .= ('<div id="myModal" class="modal">
