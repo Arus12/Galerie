@@ -1,5 +1,7 @@
 # Webová galerie jako cloudová služba
-## Cíle 
+## Základní informace
+Tento projekt byl vytvořen za účelem splnění maturitní práce. Úkolem Webové galerie jako cloudová služba bylo vytvořit galerii, která by umožňovala uživateli nahrávat obrázky ve formátu .jpg a .png. Tomuto obrázku by měl uživatel mít možnost přidat název, datum a vybrat, jestli má být obrázek privátní, či veřejný. Poté by měl mít uživatel možnost obrázku upravit tyto parametry. Také by měla galerie uživateli dát možnost se registrovat, či se přihlásit.
+## Funkce galerie
 Cílem této práce bylo vytvořit webovou galerii jako cloudovou službu. 
 ### Galerie uživateli umožnuje:
 - registrace a přihlašování
