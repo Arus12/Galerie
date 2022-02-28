@@ -7,7 +7,8 @@ Galerie uživateli umožnuje:
 - upravovat parametry nahraného obrázku
 - ukládat obrázky do složek, které se uživatel vytvoří
 - stahovat obrázky
-- možnost veřejně zobrazovat obrázky -
+- možnost veřejně zobrazovat obrázky
+- 
 Galerie využívá technologie HTML, CSS, PHP, SQL a Javascript.
 Galerie se skládá z několika PHP částí. Základní rozložení je:
 - index
