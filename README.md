@@ -19,3 +19,5 @@ Galerie využívá technologie HTML, CSS, PHP, SQL a Javascript.
 - upload
 - footer
 - nav
+
+## Náhled hlavní stránky galerie
