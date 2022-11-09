@@ -13,7 +13,7 @@ class nav
     {
         require_once("php/form/login.php");
         $header = ('<header><div class = "username"><p>' . $fname . '</p><p>' . $lname . '</p>
-        </div><div class="logo"><img src="img/logo.png" /></div>
+        </div><div class="logo"><img src="img/logo.png" alt="Logo" /></div>
         <h1>Galerie</h1></header><main>');
 
         if ($admin_state == "OFF") {
@@ -61,7 +61,7 @@ class nav
     public function nav_imgs(string $fname, string $lname, string $admin_state, string $foldername)
     {
         require_once("php/form/login.php");
-        $header = ('<header><div class = "username"><p>' . $fname . '</p><p>' . $lname . '</p></div><div class="logo"><img src="img/logo.png" /></div>
+        $header = ('<header><div class = "username"><p>' . $fname . '</p><p>' . $lname . '</p></div><div class="logo"><img src="img/logo.png" alt="Logo" /></div>
         <h1>Galerie</h1></header><main>');
 
         if ($foldername == "public_folder") {
@@ -106,7 +106,7 @@ class nav
     public function nav_upload()
     {
         $header = ('<header><div class = "arrow"><form action="../php/admin/switch_admin.php" method="post">
-        <input type="hidden" name="switch" value="FOLDER"/><button type = "submit" ></button></form></div><div class="logo"><img src="../img/logo.png" /></div>
+        <input type="hidden" name="switch" value="FOLDER"/><button type = "submit" ></button></form></div><div class="logo"><img src="../img/logo.png" alt="Logo" /></div>
         <h1>Galerie</h1></header><main>');
         return ($header);
     }
