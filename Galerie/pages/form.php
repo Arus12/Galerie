@@ -5,6 +5,7 @@
 	<title>Přihlášení</title>
 	<link href="../css/style-login.css" rel="stylesheet" />
 	<link rel="icon" href="../img/logo.png">
+	<meta name="description" content="Galerie jako webová služba">
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="author" content="Jan Černý" />
