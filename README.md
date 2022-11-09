@@ -25,3 +25,5 @@ Galerie využívá technologie HTML, CSS, PHP, SQL a Javascript.
 ## Náhled hlavní stránky galerie
 ![image](https://user-images.githubusercontent.com/74651859/155952643-9db41504-4e65-41f6-a5a4-cde2058e21f3.png)
 
+URL adresa: http://galerie.zaridi.to/
+
